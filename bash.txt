@@ -1,0 +1,57 @@
+sudo systemctl enable NetworkManager dhcpcd
+sudo systemectl stop iwd
+sudo systemctl stop iwd
+sudo systemctl start NetworkManager dhcpcd
+ls
+pwd
+ls
+ls -a
+sudo systemctl start dhcpcd iwd
+sudo su
+su
+sudo systemctl start dhcpcd iwd
+clear
+iwctl 
+ping google.com
+ping google.com
+sudo pacman -S git go xorg xorg-xinit nemo pulseaudio flameshot feh firefox zsh i3-gaps alacritty nofo-fonts noto-fonts-emoji 
+sudo pacman -S git go xorg xorg-xinit nemo pulseaudio flameshot feh firefox zsh i3-gaps alacritty noto-fonts noto-fonts-emoji 
+clear
+cp /etc/X11/xinit/xinitrc .xinitrc
+vim .xinitrc 
+clear
+startx
+ping google.com
+reboot
+sudo pacman -Sy
+setxkbmap br
+git clone https://aur.archlinux.org/yay
+cd yay/
+makepkg -si
+clear
+yay -S visual-studio-code-bin
+sudo pacman -S rofi
+firefox
+clear
+cd ..
+git clone https://github.com/manas140/dotfiles
+cd dotfiles/
+ls
+ls bin/
+ls config/
+mv config/alacritty/ config/i3/ config/picom.conf config/polybar/ config/rofi/ ~/.config/
+ls
+ls config/
+rm -rf ~/.config/i3/*
+mv config/alacritty/ config/i3/ config/picom.conf config/polybar/ config/rofi/ ~/.config/
+ls config/
+startx
+clear
+startx
+clear
+startx
+startx
+clear
+startx
+startx
+exit
