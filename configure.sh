@@ -41,7 +41,8 @@ sudo pacman -S --noconfirm git \
                python-pip \
                xdg-user-dirs \
                linux \
-               xf86-video-intel
+               xf86-video-intel \
+               meson
   
 
 # Install yay
@@ -50,9 +51,6 @@ git clone https://aur.archlinux.org/yay && cd yay
 makepkg -si
 cd ..
 rm -rf yay
-
-# Python dependences
-sudo pip3 install meson
 
 # Yay packages
 
@@ -63,7 +61,8 @@ spotify \
 lightdm-mini-greeter \
 ocs-url \
 picom-ibhagwan-git \
-polybar
+polybar \
+
 
 # fetch
 
@@ -76,7 +75,7 @@ xdg-user-dirs-update
 
 # Install fonts
 mkdir -p ~/.fonts
-cp fonts/* ~/.fonts
+cp -r fonts/* ~/.fonts
 fc-cache -v -f
 
 #install config files
@@ -84,7 +83,7 @@ mv config/* ~/.config
 
 # Install wallpapers
 mkdir -p ~/Pictures/Wallpapers
-cp wal/* ~/Pictures/Wallpapers
+cp -r wal/* ~/Pictures/Wallpapers
 
 # Start pulseaudio
 pulseaudio -D
@@ -92,10 +91,10 @@ pulseaudio --start
 
 # Configure light dm theme
 sudo rm /etc/lightdm/lightdm-mini-greeter.conf
-sudo cp configfiles/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
+sudo cp -r configfiles/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
 
 sudo rm /etc/lightdm/lightdm.conf
-sudo cp configfiles/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp -r configfiles/lightdm.conf /etc/lightdm/lightdm.conf
 
 #zsh
 cp config/.zshrc ~/.zshrc
@@ -111,7 +110,7 @@ mkdir -p ~/.themes
 cp -r themes/Equilux-compact ~/.themes
 
 mkdir -p ~/.config/gtk-3.0/
-cp -r config/settings.ini ~/.config/gtk-3.0/
+cp -r configfiles/settings.ini ~/.config/gtk-3.0/
 
 # Systemectl
 sudo systemctl enable lightdm
