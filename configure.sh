@@ -42,7 +42,8 @@ sudo pacman -S --noconfirm git \
                xdg-user-dirs \
                linux \
                xf86-video-intel \
-               meson
+               meson \
+               lightdm-gtk-greeter
   
 
 # Install yay
@@ -58,7 +59,6 @@ yay -S --noconfirm visual-studio-code-bin \
 google-chrome \
 ncpamixer \
 spotify \
-lightdm-mini-greeter \
 ocs-url \
 picom-ibhagwan-git \
 polybar \
@@ -89,15 +89,8 @@ cp -r wal/* ~/Pictures/Wallpapers
 pulseaudio -D
 pulseaudio --start
 
-# Configure light dm theme
-sudo rm /etc/lightdm/lightdm-mini-greeter.conf
-sudo cp -r configfiles/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
-
-sudo rm /etc/lightdm/lightdm.conf
-sudo cp -r configfiles/lightdm.conf /etc/lightdm/lightdm.conf
-
 #zsh
-cp config/.zshrc ~/.zshrc
+cp configfiles/.zshrc ~/.zshrc
 
 #virtualbox module
 sudo modprobe vboxdrv
@@ -115,4 +108,4 @@ cp -r configfiles/settings.ini ~/.config/gtk-3.0/
 # Systemectl
 sudo systemctl enable lightdm
 
-echo "Please, reboot your system"
+echo "Please, reboot your system :D"
