@@ -4,9 +4,9 @@
 
 sudo pacman -Sy
 
-sudo pacman -S --noconfirm archlinux-keyring
+sudo pacman -S archlinux-keyring
 
-sudo pacman -S --noconfirm git \
+sudo pacman -S git \
                go \
                xorg \
                xorg-xinit \
@@ -79,7 +79,7 @@ cp -r fonts/* ~/.fonts
 fc-cache -v -f
 
 #install config files
-mv config/* ~/.config
+cp -r config/* ~/.config
 
 # Install wallpapers
 mkdir -p ~/Pictures/Wallpapers
@@ -90,7 +90,7 @@ pulseaudio -D
 pulseaudio --start
 
 #zsh
-cp configfiles/.zshrc ~/.zshrc
+cp -r configfiles/.zshrc ~/.zshrc
 
 #virtualbox module
 sudo modprobe vboxdrv
