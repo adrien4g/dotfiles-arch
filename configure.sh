@@ -4,9 +4,9 @@
 
 sudo pacman -Sy
 
-sudo pacman -S archlinux-keyring
+sudo pacman -S --noconfirm archlinux-keyring
 
-sudo pacman -S git \
+sudo pacman -S --noconfirm --needed git \
                go \
                xorg \
                xorg-xinit \
@@ -55,7 +55,7 @@ rm -rf yay
 
 # Yay packages
 
-yay -S --noconfirm visual-studio-code-bin \
+yay -S visual-studio-code-bin \
 google-chrome \
 ncpamixer \
 spotify \
@@ -107,5 +107,8 @@ cp -r configfiles/settings.ini ~/.config/gtk-3.0/
 
 # Systemectl
 sudo systemctl enable lightdm
+
+# Oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Please, reboot your system :D"
